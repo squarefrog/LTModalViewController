@@ -85,7 +85,7 @@ open class ModalViewController: UIViewController {
         overlayView.frame  = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         overlayView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
 
-        self.addChildViewController(rootController)
+        self.addChild(rootController)
         view.addSubview(rootController.view)
         rootController.view.frame = CGRect(x: (view.frame.width-presentedViewSize.width)/2, y: (view.frame.height-presentedViewSize.height)/2 + presentContentInset, width: presentedViewSize.width, height: presentedViewSize.height)
         rootController.view.autoresizingMask = [.flexibleTopMargin,.flexibleBottomMargin,.flexibleLeftMargin,.flexibleRightMargin]
